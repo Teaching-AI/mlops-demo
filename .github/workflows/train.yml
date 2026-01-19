@@ -14,39 +14,39 @@ jobs:
   train-and-test:
     runs-on: ubuntu-latest
     
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with: 
-        python-version: '3.12'
-
-    - name: Cache dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-{{ hashFiles('requirements.txt')}}
-
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-        pip install dvc[s3] mlflow
-        
-    - name: Configure DVC
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run:
-        dvc remote modify storage access_key_id $AWS_ACCESS_KEY_ID
-        dvc remote modify storage secret_access_key $AWS_SECRET_ACCESS_KEY
-
-    - name: Pull data with DVC
-      run: dvc pull
-
-    - name: Run DVC pipeline
-      run: dvc repro
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+  
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: '3.12'
+  
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-{{ hashFiles('requirements.txt')}}
+  
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install dvc[s3] mlflow
+          
+      - name: Configure DVC
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run:
+          dvc remote modify storage access_key_id $AWS_ACCESS_KEY_ID
+          dvc remote modify storage secret_access_key $AWS_SECRET_ACCESS_KEY
+  
+      - name: Pull data with DVC
+        run: dvc pull
+  
+      - name: Run DVC pipeline
+        run: dvc repro
 
     - name: Check model performance
       run: |
