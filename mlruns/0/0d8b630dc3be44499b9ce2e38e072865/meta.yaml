@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/Code/mlops-demo/mlruns/0/0d8b630dc3be44499b9ce2e38e072865/artifacts
+end_time: 1768832627282
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0d8b630dc3be44499b9ce2e38e072865
+run_name: unequaled-fly-125
+run_uuid: 0d8b630dc3be44499b9ce2e38e072865
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1768832625382
+status: 3
+tags: []
+user_id: ubuntu

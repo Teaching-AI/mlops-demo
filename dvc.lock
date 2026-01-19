@@ -1,0 +1,28 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: uv run src/train.py
+    deps:
+    - path: data/raw/iris.csv
+      hash: md5
+      md5: 341a3b5244f213282b7b0920b729c592
+      size: 3975
+    - path: params.yaml
+      hash: md5
+      md5: 82c1df9aacbb0ebe7784d6a814be8de3
+      size: 67
+    - path: src/train.py
+      hash: md5
+      md5: 92a71c307bbdc4a223ee6d82650b0a64
+      size: 1214
+    params:
+      params.yaml:
+        model:
+          n_estimators: 200
+          max_depth: 5
+          random_state: 42
+    outs:
+    - path: models/model.pkl
+      hash: md5
+      md5: b8300c8fe2532c0cb96a742eb29314e0
+      size: 327933

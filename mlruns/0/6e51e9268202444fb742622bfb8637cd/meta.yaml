@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/Code/mlops-demo/mlruns/0/6e51e9268202444fb742622bfb8637cd/artifacts
+end_time: 1768832464458
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6e51e9268202444fb742622bfb8637cd
+run_name: legendary-newt-887
+run_uuid: 6e51e9268202444fb742622bfb8637cd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1768832464455
+status: 4
+tags: []
+user_id: ubuntu

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/Code/mlops-demo/mlruns/0/e00c0adfe39240f3bcd0906b547e5051/artifacts
+end_time: 1768832609466
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e00c0adfe39240f3bcd0906b547e5051
+run_name: mysterious-moth-202
+run_uuid: e00c0adfe39240f3bcd0906b547e5051
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1768832609462
+status: 4
+tags: []
+user_id: ubuntu

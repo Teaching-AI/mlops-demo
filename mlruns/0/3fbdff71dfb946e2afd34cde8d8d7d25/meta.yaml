@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/Code/mlops-demo/mlruns/0/3fbdff71dfb946e2afd34cde8d8d7d25/artifacts
+end_time: 1768837169174
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3fbdff71dfb946e2afd34cde8d8d7d25
+run_name: beautiful-donkey-920
+run_uuid: 3fbdff71dfb946e2afd34cde8d8d7d25
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1768837167298
+status: 3
+tags: []
+user_id: ubuntu
